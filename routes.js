@@ -20,14 +20,12 @@ router.use((req,res,next)=>{
     if(req.session.role==undefined)
     {
         acl.config({
-            baseUrl:'/',
             defaultRole:'invitado'
         });
     }
     else
     {
         acl.config({
-            baseUrl:'/',
             defaultRole:req.session.role
         });
     }
